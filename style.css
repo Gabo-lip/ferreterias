@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-green: #1e3c2c;
+    --secondary-green: #2a4a35;
+    --accent-gold: #d4a017;
+    --light-bg: #afe222;
+    --text-dark: #2c2c2c;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-header {
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    color: rgb(10, 10, 10);
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    border-bottom: 4px solid var(--accent-gold);
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0.5rem 0;
+}
+
+.main-nav a {
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    background-color: var(--accent-gold);
+    color: var(--primary-green);
+}
+
+.hero {
+    background: var(--white);
+    padding: 3rem 0;
+    border-bottom: 1px solid #000000c9;
+}
+
+.hero h2 {
+    color: var(--primary-green);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.features {
+    padding: 3rem 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 1.8rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    border-left: 5px solid var(--accent-gold);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.badge {
+    display: inline-block;
+    background: var(--accent-gold);
+    color: var(--primary-green);
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.btn-outline {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--accent-gold);
+    border-radius: 30px;
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    background: var(--accent-gold);
+    color: var(--primary-green);
+}
+
+.plumbing-section {
+    background: var(--primary-green);
+    color: rgb(10, 10, 10);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.plumbing-content h2 {
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+.services {
+    padding: 3rem 0;
+    background: var(--white);
+}
+
+.services-info {
+    background: #070707;
+    padding: 2rem;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.services-info h2 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.services-info ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.services-info li {
+    margin: 0.8rem 0;
+}
+
+.main-footer {
+    background: var(--primary-green);
+    color: #0f0f0f;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 2px solid var(--accent-gold);
+}
+
+.main-footer p {
+    margin: 0.3rem 0;
+}
+
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.4rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .feature-card {
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 2rem 0;
+    }
+    
+    .btn-outline {
+        display: block;
+        text-align: center;
+    }
+}
