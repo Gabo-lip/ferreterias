@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Ferretería La Mixteca</title>
+    <title>Ferretería La Mixteca - Herramientas Profesionales</title>
     <style>
 * {
     margin: 0;
@@ -30,12 +30,23 @@ body {
     color: white;
     padding: 1.5rem 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.logo-icon {
+    font-size: 2.5rem;
 }
 
 .main-header h1 {
     font-size: 2.2rem;
     letter-spacing: 1px;
-    margin-bottom: 0.25rem;
 }
 
 .tagline {
@@ -69,49 +80,61 @@ body {
 
 /* Hero */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('https://placehold.co/1920x600/2c3e2f/white?text=Ferretería+La+Mixteca');
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&h=600&fit=crop');
     background-size: cover;
-    background-position: center;
+    background-position: center 30%;
     color: white;
-    padding: 4rem 0;
+    padding: 5rem 0;
     text-align: center;
 }
 
 .hero h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .hero p {
     max-width: 700px;
     margin: 0 auto;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 /* Features Grid */
 .features {
-    padding: 3rem 0;
+    padding: 4rem 0;
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
 
 .feature-card {
     background: white;
     border-radius: 16px;
-    padding: 1.8rem;
+    padding: 0;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: transform 0.2s, box-shadow 0.2s;
-    border-top: 5px solid #f5a623;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+.card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.8rem;
 }
 
 .feature-card h3 {
@@ -139,62 +162,101 @@ body {
 .btn-outline {
     display: inline-block;
     margin-top: 0.8rem;
-    padding: 0.5rem 1.2rem;
+    padding: 0.6rem 1.4rem;
     border: 2px solid #1e3a2f;
     color: #1e3a2f;
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .btn-outline:hover {
     background: #1e3a2f;
     color: white;
+    transform: scale(1.02);
 }
 
 /* Plumbing section */
 .plumbing-section {
-    background: #e8f0e6;
-    padding: 3rem 0;
+    background: linear-gradient(135deg, #e8f0e6 0%, #d4e2cf 100%);
+    padding: 4rem 0;
+}
+
+.plumbing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
 }
 
 .plumbing-content {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    text-align: left;
 }
 
 .plumbing-content h2 {
     color: #1e3a2f;
     margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.plumbing-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.plumbing-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.plumbing-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.plumbing-image:hover img {
+    transform: scale(1.02);
 }
 
 /* Services */
 .services {
-    padding: 3rem 0;
+    padding: 4rem 0;
     background: white;
 }
 
 .services-info {
-    background: #fef5e7;
-    padding: 2rem;
+    background: linear-gradient(135deg, #fef5e7 0%, #fde9d4 100%);
+    padding: 2.5rem;
     border-radius: 20px;
     text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .services-info h2 {
     color: #1e3a2f;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
 }
 
 .services-info ul {
     list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .services-info li {
     margin: 0.8rem 0;
-    font-size: 1rem;
+    font-size: 1.05rem;
+    padding: 0.5rem;
+    background: rgba(255,255,255,0.6);
+    border-radius: 12px;
 }
 
 /* Footer */
@@ -202,38 +264,84 @@ body {
     background: #1e3a2f;
     color: #ccc;
     text-align: center;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
 }
 
 .main-footer p {
-    margin: 0.3rem 0;
+    margin: 0.5rem 0;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 1.5rem;
+    }
+    
     .main-nav ul {
         justify-content: center;
         gap: 1rem;
     }
     
+    .hero {
+        padding: 3rem 0;
+    }
+    
     .hero h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
     }
     
     .features-grid {
         grid-template-columns: 1fr;
     }
+    
+    .plumbing-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .plumbing-content {
+        text-align: center;
+    }
+    
+    .services-info ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-info li {
+        font-size: 0.95rem;
+    }
+    
+    .card-img {
+        height: 180px;
+    }
 }
 
-
-
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.3rem;
+    }
+}
     </style>
-
 </head>
 <body>
     <header class="main-header">
         <div class="container">
-            <h1> Ferretería La Mixteca</h1>
+            <div class="logo-container">
+                <div class="logo-icon">🔧</div>
+                <h1>Ferretería La Mixteca</h1>
+            </div>
             <p class="tagline">Proyecto de Innovación Digital | TecNM Acatlán de Osorio</p>
             <nav class="main-nav">
                 <ul>
@@ -259,24 +367,33 @@ body {
             <div class="container">
                 <div class="features-grid">
                     <article class="feature-card">
-                        <h3> Herramientas Eléctricas</h3>
-                        <p><strong>Rotomartillo Profesional 1/2"</strong><br>Motor de alta eficiencia ideal para perforaciones demandantes en concreto, madera y acero. Incluye mango lateral de control y varilla de profundidad.</p>
-                        <span class="badge">Disponibilidad inmediata</span>
-                        <a href="#" class="btn-outline">Ver Ficha Técnica</a>
+                        <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&h=400&fit=crop" alt="Rotomartillo profesional" class="card-img">
+                        <div class="card-content">
+                            <h3>🔧 Herramientas Eléctricas</h3>
+                            <p><strong>Rotomartillo Profesional 1/2"</strong><br>Motor de alta eficiencia ideal para perforaciones demandantes en concreto, madera y acero. Incluye mango lateral de control y varilla de profundidad.</p>
+                            <span class="badge">⭐ Disponibilidad inmediata</span>
+                            <a href="#" class="btn-outline">Ver Ficha Técnica</a>
+                        </div>
                     </article>
 
                     <article class="feature-card">
-                        <h3> Mecánica</h3>
-                        <p><strong>Juego de Llaves Combinadas (12 piezas)</strong><br>Fabricadas en acero al cromo vanadio de alta resistencia al torque. Medidas estándar impresas en relieve para rápida identificación.</p>
-                        <span class="badge">Precio Especial Contratista</span>
-                        <a href="#" class="btn-outline">Agregar a Cotización</a>
+                        <img src="https://images.unsplash.com/photo-1581145493910-8e3b73c6d8f5?w=600&h=400&fit=crop" alt="Juego de llaves mecánicas" class="card-img">
+                        <div class="card-content">
+                            <h3>🔩 Mecánica</h3>
+                            <p><strong>Juego de Llaves Combinadas (12 piezas)</strong><br>Fabricadas en acero al cromo vanadio de alta resistencia al torque. Medidas estándar impresas en relieve para rápida identificación.</p>
+                            <span class="badge">💰 Precio Especial Contratista</span>
+                            <a href="#" class="btn-outline">Agregar a Cotización</a>
+                        </div>
                     </article>
 
                     <article class="feature-card">
-                        <h3>Electricidad</h3>
-                        <p><strong>Kit de Multímetro Digital y Pinzas</strong><br>Paquete completo para electricistas. Multímetro con pantalla LCD retroiluminada y pinzas con aislamiento certificado hasta 1000V.</p>
-                        <span class="badge">Últimas piezas</span>
-                        <a href="#" class="btn-outline">Consultar Existencias</a>
+                        <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=600&h=400&fit=crop" alt="Multímetro digital y pinzas" class="card-img">
+                        <div class="card-content">
+                            <h3>⚡ Electricidad</h3>
+                            <p><strong>Kit de Multímetro Digital y Pinzas</strong><br>Paquete completo para electricistas. Multímetro con pantalla LCD retroiluminada y pinzas con aislamiento certificado hasta 1000V.</p>
+                            <span class="badge">🔥 Últimas piezas</span>
+                            <a href="#" class="btn-outline">Consultar Existencias</a>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -284,9 +401,16 @@ body {
 
         <section class="plumbing-section">
             <div class="container">
-                <div class="plumbing-content">
-                    <h2>Línea de Plomería y Conexiones PVC / CPVC</h2>
-                    <p>Asegura tus instalaciones hidráulicas con nuestra variedad de tuberías, codos, niples y pegamentos de alta presión. Todo el material cuenta con certificación de calidad para resistir las condiciones climáticas de la Mixteca Baja.</p>
+                <div class="plumbing-grid">
+                    <div class="plumbing-content">
+                        <h2>🚰 Línea de Plomería y Conexiones PVC / CPVC</h2>
+                        <p>Asegura tus instalaciones hidráulicas con nuestra variedad de tuberías, codos, niples y pegamentos de alta presión. Todo el material cuenta con certificación de calidad para resistir las condiciones climáticas de la Mixteca Baja.</p>
+                        <br>
+                        <a href="#" class="btn-outline" style="background: #1e3a2f; color: white; border: none;">Ver Catálogo Completo →</a>
+                    </div>
+                    <div class="plumbing-image">
+                        <img src="https://images.unsplash.com/photo-1581092335871-4e5f83c4ac6c?w=600&h=400&fit=crop" alt="Tuberías y conexiones de PVC">
+                    </div>
                 </div>
             </div>
         </section>
@@ -294,12 +418,13 @@ body {
         <section class="services">
             <div class="container">
                 <div class="services-info">
-                    <h2>Servicios Ferreteros</h2>
+                    <h2>📍 Servicios Ferreteros</h2>
                     <ul>
-                        <li><strong>Horario:</strong> Lunes a Sábado 7:00 AM - 7:00 PM</li>
-                        <li><strong>Ubicación:</strong> Centro de Acatlán de Osorio, Pue.</li>
-                        <li><strong>Cotizaciones especiales</strong> para contratistas.</li>
-                        <li><strong>Servicio de entrega a domicilio.</strong></li>
+                        <li><strong>🕐 Horario:</strong> Lunes a Sábado 7:00 AM - 7:00 PM</li>
+                        <li><strong>📍 Ubicación:</strong> Centro de Acatlán de Osorio, Pue.</li>
+                        <li><strong>📋 Cotizaciones especiales</strong> para contratistas</li>
+                        <li><strong>🚚 Servicio de entrega a domicilio</strong> en toda la región</li>
+                        <li><strong>💳 Aceptamos:</strong> Efectivo, Transferencia y Tarjetas</li>
                     </ul>
                 </div>
             </div>
@@ -310,6 +435,7 @@ body {
         <div class="container">
             <p>© 2026 Ferretería La Mixteca. Todos los derechos reservados.</p>
             <p>TecNM Campus Acatlán - Desarrollo Full Stack</p>
+            <p style="font-size: 0.85rem; margin-top: 1rem;">✨ Calidad y confianza para tus proyectos ✨</p>
         </div>
     </footer>
 </body>
