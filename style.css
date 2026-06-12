@@ -5,10 +5,16 @@
 }
 
 body {
-   background-image:url("ferreteria.png")
-
+    font-family: 'Segoe UI', arial, 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+    background-image: url("ferreteria.png");  /* ← AQUÍ va la imagen */
+    background-size: cover;  /* Cubre toda la pantalla */
+    background-position: center;  /* Centra la imagen */
+    background-attachment: fixed;  /* Efecto parallax (opcional) */
+    background-repeat: no-repeat;  /* No repetir la imagen */
 }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
