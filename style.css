@@ -4,22 +4,9 @@
     box-sizing: border-box;
 }
 
-:root {
-     image-url(ferreteria.png)
-    --primary-green: #1e3c2c;
-    --secondary-green: #2a4a35;
-    --accent-gold: #d4a017;
-    --light-bg: #afe222;
-    --text-dark: #2c2c2c;
-    --white: #ffffff;
-}
-
 body {
-   
-    font-family: 'Segoe UI', arial, 'Helvetica Neue', sans-serif;
-    line-height: 1.6;
-    color: var(--text-dark);
-    background-color: var(--light-bg);
+   background-image:url("ferreteria.png")
+
 }
 
 .container {
